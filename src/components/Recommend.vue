@@ -18,8 +18,19 @@
             </div>
         </div>
         <h6 class="p-2">电台</h6>
-        <div>
-            
+        <div class="d-grid">
+            <div v-for="(item,index) in radioList" :key="index">
+                <img :src="item.picUrl" alt="" class="p-1">
+                <label>{{item.Ftitle}}</label>
+            </div>
+        </div>
+        <h6 class="p-2">热门歌单</h6>
+        <div class="d-grid">
+            <div v-for="(item,index) in songList" :key="index">
+                <img :src="item.picUrl" alt="" class="p-1">
+                <small>{{item.songListDesc}}</small>
+                <small class="text-left">{{item.songListAuthor}}</small>
+            </div>
         </div>
     </div>
 </template>
@@ -31,19 +42,21 @@ export default {
     data(){
         return{
             img:[],
-            radioList:[{
-                
-            }],
+            radioList:[],
+            songList:[]
         }
     },
     created(){
         axios("/proxy/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg").then(data=>{
-            //console.log(data);
-            for (let i in data.data.data.slider){
-                this.img.push(data.data.data.slider[i].picUrl)
+            console.log(data.data);
+            for (let index in data.data.data.slider){
+                this.img.push(data.data.data.slider[index].picUrl)
             }
-            for(let i in data.data.data.radioList){
-                
+            for(let index in data.data.data.radioList){
+                this.radioList.push(data.data.data.radioList[index])
+            }
+            for(let index in data.data.data.songList){
+                this.songList.push(data.data.data.songList[index])
             }
         })
     }
@@ -52,5 +65,18 @@ export default {
 
 
 <style scoped>
+.d-grid img{
+    width: 160px;
+    height:160px;
+}
+.d-grid{
+    display:grid;
+    grid-template-columns: 50% 50%;
 
+}
+.hide{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 </style>
