@@ -12,8 +12,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       "/proxy/":{
-        target:"http://m.kugou.com",
-        "secure":false,
+        target:"https://c.y.qq.com",
+        "secure":true,
         "changeOrigin":true,
         "pathRewrite":{
           "^/proxy":""
@@ -23,6 +23,14 @@ module.exports = {
         }
       }
     },
+    //url
+    //https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg新歌
+
+
+
+
+
+
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

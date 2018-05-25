@@ -1,9 +1,12 @@
 <template>
-    <div id="search">search</div>
+    <div id="singer">
+        歌手
+    </div>
 </template>
+
 
 <script>
 export default {
-    name:'search'
+    name:'singer'
 }
 </script>

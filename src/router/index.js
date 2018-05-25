@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import NewSong from '@/components/NewSong'
+import Recommend from '@/components/Recommend'
 import Rank from '@/components/Rank'
-import Search from '@/components/Search'
 import NavBar from '@/components/NavBar'
-import Plist from '@/components/Plist'
-import Singer from '@/components/Singer'
+import Search from '@/components/Search'
 Vue.use(Router)
 
 export default new Router({
@@ -13,10 +11,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'newsong',
+      name: 'recommend',
       components:{
         nav:NavBar,
-        default:NewSong
+        default:Recommend
       } 
     },
     {
@@ -28,25 +26,12 @@ export default new Router({
       }
     },
     {
-      path:'/plist',
-      name:'plist',
-      components:{
-        nav:NavBar,
-        default:Plist
-      }
-    },
-    {
-      path:'/singer',
-      name:'singer',
-      components:{
-        nav:NavBar,
-        default:Singer
-      }
-    },
-    {
       path:'/search',
       name:'search',
-      component:Search
+      components:{
+        nav:NavBar,
+        default:Search
+      }
     }
   ]
 })
