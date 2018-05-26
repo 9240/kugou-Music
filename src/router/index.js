@@ -4,6 +4,8 @@ import Recommend from '@/components/Recommend'
 import Rank from '@/components/Rank'
 import NavBar from '@/components/NavBar'
 import Search from '@/components/Search'
+import SingleRank from '@/components/SingleRank'
+import Play from '@/components/Play'
 Vue.use(Router)
 
 export default new Router({
@@ -31,6 +33,22 @@ export default new Router({
       components:{
         nav:NavBar,
         default:Search
+      }
+    },
+    {
+      path:'/singlerank',
+      name:'singlerank',
+      components:{
+        nav:NavBar,
+        default:SingleRank
+      }
+    },
+    {
+      path:'/play/:songmid',
+      name:'play',
+      components:{
+        nav:NavBar,
+        default:Play
       }
     }
   ]
