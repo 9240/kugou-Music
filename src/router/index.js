@@ -44,7 +44,7 @@ export default new Router({
       }
     },
     {
-      path:'/play/:songmid',
+      path:'/play',
       name:'play',
       components:{
         nav:NavBar,
