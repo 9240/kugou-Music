@@ -2,13 +2,13 @@
 
 > 小郑
 
-## Build Setup
+## Build Setup(注意访问地址)
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at <font color = "red">localhost:8080/kugou-Music </font>
+# serve with hot reload at localhost:8080/kugou-Music
 npm run dev
 
 # build for production with minification
