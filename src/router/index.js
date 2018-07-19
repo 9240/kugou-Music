@@ -12,7 +12,7 @@ export default new Router({
   mode:'history',
   routes: [
     {
-      path: '/',
+      path: '/kugou-Music',
       name: 'recommend',
       components:{
         nav:NavBar,
@@ -20,7 +20,7 @@ export default new Router({
       } 
     },
     {
-      path:'/rank',
+      path:'/kugou-Music/rank',
       name:'rank',
       components:{
         nav:NavBar,
@@ -28,7 +28,7 @@ export default new Router({
       }
     },
     {
-      path:'/search',
+      path:'/kugou-Music/search',
       name:'search',
       components:{
         nav:NavBar,
@@ -36,7 +36,7 @@ export default new Router({
       }
     },
     {
-      path:'/singlerank',
+      path:'/kugou-Music/singlerank',
       name:'singlerank',
       components:{
         nav:NavBar,
@@ -44,7 +44,7 @@ export default new Router({
       }
     },
     {
-      path:'/play',
+      path:'/kugou-Music/play',
       name:'play',
       components:{
         nav:NavBar,

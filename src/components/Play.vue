@@ -24,7 +24,8 @@ export default {
             songmsg:[],
             picid:'',
             picurl:'',
-            onoff:false
+            onoff:false,
+            timer:''
         }
     },
     created(){
@@ -44,7 +45,7 @@ export default {
         play(){
             if(!this.onoff){
                 this.$refs.music.play();
-                setInterval(()=>{
+                this.timer = setInterval(()=>{
                     this.$refs.pic.style.transform = `rotateZ(${this.$refs.music.currentTime*8}deg)`
                 },100)
             }else{
@@ -52,6 +53,9 @@ export default {
             }
             this.onoff = !this.onoff
         }
+    },
+    destroyed(){
+        clearInterval(this.timer);
     }
 }
 </script>
