@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at * localhost:8080/kugou-Music (注意) *
+# serve with hot reload at <font color = "red">localhost:8080/kugou-Music </font>
 npm run dev
 
 # build for production with minification
